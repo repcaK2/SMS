@@ -1,0 +1,208 @@
+body {
+    background: rgb(5,5,5);
+    background: linear-gradient(90deg, rgba(5,5,5,1) 0%, rgba(45,24,77,1) 33%, rgba(64,28,116,1) 63%, rgba(103,0,255,1) 98%);
+    margin: 0px;
+}
+.marginleft50px {
+    margin-left: 50px;
+}
+#centerthemenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.loginmenu {
+    background: rgb(66,36,97);
+    background: linear-gradient(90deg, rgba(66,36,97,1) 0%, rgba(72,45,102,1) 48%, rgba(50,27,85,1) 100%);
+    width: clamp(250px, calc(100% - 10px), 500px);
+    height: 230px;
+    border-radius: 50px;
+    position: absolute;
+}
+.loginmenu::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: auto;
+    left: auto;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-rgb 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+}
+@keyframes glowing-rgb{
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 75%;
+}
+
+.form__field {
+  font-family: inherit !important;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight:700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 85%;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-rgb 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.buttonsubmit {
+    margin-top: 20px;
+}
+#registerlink {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+#divregisterlink {
+    position: absolute;
+    right: 70px;
+    top: 200px;
+}
+#registerlink:hover {
+    color: #11998e;
+    text-decoration: underline;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 2px solid #9b9b9b;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: none;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #fff;
+}

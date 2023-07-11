@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org%22%3E/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+<form action="/registerUser" method="post">
+    <div id="centerthemenu" name="">
+        <div id="loginmenu" name="" class="loginmenu">
+            <div class="form__group field marginleft50px">
+                <input type="email" class="form__field" placeholder="name" name="" id='email' required />
+                <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="form__group field marginleft50px">
+                <input type="text" class="form__field" placeholder="name" name="" id='firstname' required />
+                <label for="firstname" class="form__label">First name</label>
+            </div>
+            <div class="form__group field marginleft50px">
+                <input type="text" class="form__field" placeholder="name" name="" id='lastname' required />
+                <label for="lastname" class="form__label">Last name</label>
+            </div>
+            <div class="form__group field marginleft50px">
+                <input type="number" class="form__field" placeholder="name" name="" id='phoneNumber' required />
+                <label for="phoneNumber" class="form__label">Phone number</label>
+            </div>
+            <div class="form__group field marginleft50px">
+                <input type="password" class="form__field" placeholder="name" name="" id='password' required />
+                <label for="password" class="form__label">Password</label>
+            </div>
+            <div class="form__group field marginleft50px">
+                <input type="password" class="form__field" placeholder="name" name="" id='confirmPassword' required />
+                <label for="confirmPassword" class="form__label">Confirm password</label>
+            </div>
+            <div id="sbumitbutton" class="marginleft50px buttonsubmit">
+                <button class="button-85" role="button">Create new account</button>
+            </div>
+            <div id="divloginlink">
+                <a id="loginlink" href="login.html">You have an account? Log in!</a>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
